@@ -7,20 +7,21 @@ using namespace std;
 // get a total of prices
 // menu driven
 
-struct Item {
+class BaseItem {
+public:
     double Price;
     string Name;
     double Weight;
 
     // default constructor - sets up item for first use - 
-    Item() {
+    BaseItem() {
         Price = 0.0;
         Name = "";
         Weight = 0.0;
     }
 
     // overloaded constructor
-    Item(string name, double price) {
+    BaseItem(string name, double price) {
         Price = price;
         Name = name;
         Weight = 0.0;
@@ -29,15 +30,15 @@ struct Item {
 
 int sum(vector<int> items);
 int recursiveSum(int min, int max);
-void displayList(vector<Item> list);
+void displayList(vector<BaseItem> list);
 
 int main()
 {
-    vector<Item> items;
-    Item toast = Item("Toast", 0.5);
-    Item eggs = Item("Eggs", 1.95);
-    Item milk = Item("Milk", 4.50);
-    Item callofduty = Item("Call of Duty", 69.95);
+    vector<BaseItem> items;
+    BaseItem toast = BaseItem("Toast", 0.5);
+    BaseItem eggs = BaseItem("Eggs", 1.95);
+    BaseItem milk = BaseItem("Milk", 4.50);
+    BaseItem callofduty = BaseItem("Call of Duty", 69.95);
 
     items.push_back(toast);
     items.push_back(eggs);
@@ -71,7 +72,7 @@ int recursiveSum(int min, int max) {
     return min + recursiveSum(min + 1, max);
 }
 
-void displayList(vector<Item> list) {
+void displayList(vector<BaseItem> list) {
     // process the list
 
     // tell the user what we are doing
