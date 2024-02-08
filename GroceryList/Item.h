@@ -14,7 +14,5 @@ public:
 	// constructors
 	Item();
 	Item(std::string name, double price);
-
-	void Test();
 };
 
