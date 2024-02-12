@@ -21,7 +21,7 @@ public:
 
 	void PrintList();
 	void ClearList();
-	//void RemoveItem(int index);
+	void RemoveItem(int index);
 	//void UpdateItem(int index, string name, double price, double weight);
 
 	//double GetSubtotal();

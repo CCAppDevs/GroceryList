@@ -41,3 +41,9 @@ void GroceryList::ClearList()
 	cout << "Clearing the list...\n";
 	Items.clear();
 }
+
+void GroceryList::RemoveItem(int index)
+{
+	// remove the item at index from the list
+	Items.erase(Items.begin() + index);
+}

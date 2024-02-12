@@ -21,6 +21,7 @@ int main()
 		cout << "1. Add an item.\n";
 		cout << "2. Print the List\n";
 		cout << "3. Clear the List\n";
+		cout << "4. Remove an Item from the List\n";
 		cout << "0. Exit\n";
 
 		cout << "\n";
@@ -30,6 +31,7 @@ int main()
 
 		string name = "";
 		double price = 0.0;
+		int index = -1;
 
 		switch (choice) {
 		case 0:
@@ -48,6 +50,11 @@ int main()
 			break;
 		case 3:
 			myList.ClearList();
+			break;
+		case 4:
+			cout << "What is the index of the item you would like to remove? ";
+			cin >> index;
+			myList.RemoveItem(index);
 			break;
 		default:
 			cout << "Invalid option, please try again.\n";
